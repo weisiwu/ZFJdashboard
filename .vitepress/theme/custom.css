@@ -1,0 +1,72 @@
+:root {
+  --vp-c-brand-1: #e85d3a;
+  --vp-c-brand-2: #d14b2a;
+  --vp-c-brand-3: #c04020;
+  --vp-font-family-base: 'Inter', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Menlo, monospace;
+}
+
+/* Hero 标题渐变 */
+.VPHero .name {
+  background: linear-gradient(135deg, #e85d3a, #f7a84b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 暗色模式品牌色调整 */
+.dark {
+  --vp-c-brand-1: #f0805a;
+  --vp-c-brand-2: #e86f45;
+  --vp-c-brand-3: #d06035;
+}
+
+/* 表格美化 */
+.vp-doc table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9em;
+}
+
+.vp-doc table th {
+  background-color: var(--vp-c-brand-soft, rgba(232, 93, 58, 0.08));
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.vp-doc table th,
+.vp-doc table td {
+  padding: 10px 16px;
+  border: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc table tr:hover td {
+  background-color: var(--vp-c-brand-soft, rgba(232, 93, 58, 0.04));
+}
+
+/* 代码块优化 */
+.vp-doc div[class*='language-'] {
+  border-radius: 8px;
+}
+
+.vp-doc div[class*='language-'] code {
+  font-size: 0.875em;
+  line-height: 1.7;
+}
+
+/* 中文字体行高优化 */
+.vp-doc p,
+.vp-doc li {
+  line-height: 1.8;
+}
+
+/* Feature 卡片悬停效果 */
+.VPFeature:hover {
+  transform: translateY(-2px);
+  transition: transform 0.25s ease;
+}
+
+/* 侧边栏活跃项样式 */
+.VPSidebarItem.is-active > .item .link > .text {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
